@@ -1,0 +1,511 @@
+
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+div.scrollmenu {
+  background-color: #333;
+  overflow: auto;
+  white-space: nowrap;
+
+}
+
+div.scrollmenu a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+div.scrollmenu a:hover {
+  background-color: #777;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Akronim';font-size: 22px;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+
+.content h1 {
+  font-size: 3em;
+}
+
+.content p {
+  font-size: 1.5em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+
+
+
+
+
+div.scroll-container {
+  background-color: #333;
+  overflow: auto;
+  white-space: nowrap;
+  padding: 10px;
+}
+
+div.scroll-container img {
+  padding: 10px;
+}
+
+
+
+
+
+
+
+
+img:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+
+
+
+
+
+
+
+*long-container {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+  padding: 20px;
+  font-family: Arial;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 10px -16px;
+}
+
+/* Add padding BETWEEN each column */
+
+
+
+
+
+
+
+
+
+
+.heading{
+  fon
+
+}
+
+
+
+
+
+
+
+
+
+
+
+</style>
+
+
+
+
+
+
+
+
+<body>
+<div class="scrollmenu">
+    <a href="#home">Home</a>
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+    <a href="#support">Support</a>
+    <a href="#blog">Blog</a>
+    <a href="#tools">Tools</a>  
+    <a href="#base">Base</a>
+    <a href="#custom">Custom</a>
+    <a href="#more">More</a>
+    <a href="#logo">Logo</a>
+    <a href="#friends">Friends</a>
+    <a href="#partners">Partners</a>
+    <a href="#people">People</a>
+    <a href="#work">Work</a>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="video-container">
+    <video autoplay muted loop id="video-background">
+      <source src="WhatsApp Video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="content">
+      <!-- Your content here -->
+      <h1 style="color: blue;">Welcome to My Carpert Website</h1>
+      <p style="color: #000;"> <b>Good carpets are more than just floor coverings; they're an expression of comfort, style, and luxury woven into the fabric of a home. </br>The tactile sensation of walking barefoot on a plush carpet, the visual feast of intricate patterns and vibrant colors, and the acoustic warmth that softens every footfall — these are just a few elements that make a carpet more than a mere accessory.</br> In this exploration, we delve into the world of carpets, unraveling the qualities that distinguish a good carpet from the ordinary, and celebrate the craftsmanship and artistry that elevate these textiles to an integral part of interior design.
+        In conclusion, good carpets are a synthesis of quality materials, masterful craftsmanship, thoughtful design, and practical functionality. </br>They elevate the aesthetic appeal of a space, imbuing it with warmth, comfort, and personality.</br> Whether it's the intricate patterns of a handwoven Persian rug, the sumptuous texture of a silk carpet, or the bold colors of a contemporary design, a good carpet has the power to transform any room into a sanctuary of style and sophistication.</b> </p>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  
+  <h1 style="color: purple; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; ">THE BEAUTY OF HAVING CARPERTS</h1>
+  <p style="font-style: initial; font-size: larger; font-family: Georgia, 'Times New Roman', Times, serif; ">Good carpets are more than just floor coverings; they're an expression of comfort, style, and luxury woven into the fabric of a home. The tactile sensation of walking barefoot on a plush carpet, the visual feast of intricate patterns and vibrant colors, and the acoustic warmth that softens every footfall — these are just a few elements that make a carpet more than a mere accessory. In this exploration, we delve into the world of carpets, unraveling the qualities that distinguish a good carpet from the ordinary, and celebrate the craftsmanship and artistry that elevate these textiles to an integral part of interior design.At the heart of a good carpet lies its material. Natural fibers such as wool, silk, and cotton are revered for their durability, softness, and sustainability. Wool, in particular, stands out as a favorite due to its resilience, natural stain resistance, and luxurious texture. Silk, with its luminous sheen and sumptuous feel, adds opulence to any carpet, while cotton lends a casual elegance and is often used as a foundation or blend for added strength
+    The quality of craftsmanship is another hallmark of a good carpet. Handmade carpets, crafted by skilled artisans using traditional techniques passed down through generations, exude a sense of heritage and authenticity. Each knot, meticulously tied by hand, contributes to the intricate patterns and designs that adorn the surface of the carpet.  </br> The time-honored methods of hand weaving or hand tufting ensure a level of detail and precision that mass-produced carpets cannot replicate.
+    One cannot overlook the importance of design in defining a good carpet.   </br>
+    Beyond aesthetics, a good carpet also offers practical benefits.     </br>
+   </p>
+
+
+
+
+
+  </br>
+
+  <h2 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color: #04AA6D;">IF INTERESTED PLEASE LOGIN DEAREST FOR SERVICES</h2>
+
+  <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+  
+  <div id="id01" class="modal">
+    
+    <form class="modal-content animate" action="/action_page.php" method="post">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <img src="11.jpeg" alt="Avatar" width="400px;" height="250px" class="avatar">
+      </div>
+  
+      <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required>
+  
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+          
+        <button type="submit">Login</button>
+        <label>
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+      </div>
+  
+      <div class="container" style="background-color:#f1f1f1">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <span class="psw">Forgot <a href="#">password?</a></span>
+      </div>
+    </form>
+  </div>
+
+  
+
+
+
+
+
+  <h2 style="color: magenta;">Image Gallery With Horizontal Scroll</h2>
+  <p><h1  style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: #04AA6D;">STEP INTO LUXURY:</h1></p>
+  <h2> DISCOVER OUR EXQUISITE CARPET COLLECTION.</h2>
+  <p> Layering carpets is a creative way to add depth and visual interest to a room. By combining carpets of different sizes, shapes, and textures, one can create a dynamic interplay of colors and patterns that infuses the space with personality and character. A flat-weave rug layered atop a larger, plush carpet adds visual contrast and dimension, while a sheepskin or hide rug introduces a touch of organic warmth and texture to the ensemble..</p>
+  
+
+
+  <p><h1  style="color: chartreuse; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">EXPERIENCE THE ULTIMATE IN COMFORT AND CRAFTSMANSHIP:</h1></p>
+  <p><h2> OUR CARPET COLLECTION</h2></p>
+  <div class="scroll-container">
+    <img src="1.jpg" alt="Cinque Terre" width="600" height="400" >
+    <img src="2.jpg" alt="Forest" width="600" height="400">
+    <img src="3.jpg" alt="Cinque Terre" width="600" height="400">
+    <img src="4.jpg" alt="Forest" width="600" height="400">
+    <img src="5.jpg" alt="Northern Lights" width="600" height="400">
+    <img src="6.jpg" alt="Mountains" width="600" height="400">
+    <img src="7.jpg" alt="Cinque Terre" width="600" height="400">
+    <img src="8.jpg" alt="Forest" width="600" height="400">
+    <img src="9.jpg" alt="Northern Lights" width="600" height="400">
+    <img src="10.jpg" alt="Mountains" width="600" height="400">
+    <img src="11.jpg" alt="Cinque Terre" width="600" height="400">
+    <img src="12.jpg" alt="Cinque Terre" width="600" height="400">
+    <img src="13.jpg" alt="Cinque Terre" width="600" height="400">
+    <img src="14.jpg" alt="Cinque Terre" width="600" height="400">
+    <img src="15.jpg" alt="Cinque Terre" width="600" height="400">
+    <img src="16.jpg" alt="Cinque Terre" width="600" height="400">
+  </div>
+  
+  
+
+
+  <p><h1>LUXURIATE IN EVERY STEP: </h1></p>
+  <h2>DISCOVER OUR HANDPICKED CARPET CREATIONS</h2>
+<p >   </br style="font-size: x-large;">It provides insulation, helping to regulate room temperature and reduce energy costs. Its sound-absorbing properties minimize noise pollution, creating a tranquil environment conducive to relaxation and concentration. Moreover, a well-made carpet can withstand the test of time, retaining its beauty and functionality for years to come with proper care and maintenance.
+    Texture plays a crucial role in the allure of a good carpet.</p>
+
+
+
+  <p ><h1 style="color: hotpink; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">CRAFTED TO PERFECTION:</h1></p> 
+  <h2>EXPLORE OUR PREMIUM CARPET ASSORTMENT</h2>
+  <p style="font-size: x-large;"> </br> A carpet that is too small can make the space feel disjointed and cramped, while one that is too large can overwhelm the room and obscure other design elements. The ideal size of a carpet should allow for a border of flooring to frame the edges of the room, creating a harmonious balance between the carpet and the surrounding space.</p>
+
+
+
+   <p ><h1 style="color: tomato; font-family: 'Times New Roman', Times, serif;">  LUXURY REDEFINED: </h1></p>
+   <h2>UNRAVEL THE BEAUTY OF OUR EXCLUSIVE CARPET DESIGNS</h2>
+   <p style="font-size: x-large;"> </br>Whether it's the velvety softness of a plush pile carpet underfoot or the tactile richness of a handwoven kilim, texture adds depth and dimension to the overall design scheme. A mix of textures within a space can create visual interest and invite tactile exploration, enriching the sensory experience of the room.
+    Color is another key element in carpet design, capable of transforming the mood and atmosphere of a space. Soft, neutral tones such as beige, taupe, and gray create a sense of serenity and sophistication, making them ideal for creating a calming retreat in bedrooms or living areas. On the other hand, bold hues like ruby red, sapphire blue, or emerald green inject drama and vibrancy into the room, becoming a focal point around which the rest of the décor revolves. 
+    Size matters when it comes to selecting the right carpet for a room.</p>
+
+
+ <p><h1> FROM CLASSIC TO CONTEMPORARY:</h1></p> 
+<h2>FIND YOUR PERFECT CARPET STYLE WITH US</h2>
+
+
+
+
+
+ <div class="heading"> <h1>JULIUS on this again</h1></div>
+
+ 
+
+
+
+
+
+
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
